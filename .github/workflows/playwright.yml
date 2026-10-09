@@ -31,6 +31,8 @@ jobs:
         run: pytest -v --disable-warnings
         env:
           PLAYWRIGHT_HEADLESS: true
+          CI: true
+
 
       - name: Upload Playwright Report
         if: always()
