@@ -14,9 +14,10 @@ stack = {
 
 ## Folder structure
 folder_structure = {
-    "src/pages/": "Page Object classes (one file per page)",
+    "src/pages/": "Page Object classes (one file per page) and declared locators and actions for that page only and created a BasePage class for common actions",
+    "config/config.ini": "Configuration settings (base URL, browser, headless, timeouts)",
     "src/fixtures/": "Custom fixtures extending base test",
-    "src/utils/": "Pure helpers, no test logic",
+    "src/utils/": "Pure helpers, no test logic and no page objects and no hardcoded locators",
     "tests/": "Spec files, mirror app URL structure",
     "tests/data/": "JSON/CSV test data",
     "specs/": "Planner output (Markdown plans)"

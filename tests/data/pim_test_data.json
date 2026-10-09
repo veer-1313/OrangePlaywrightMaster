@@ -1,0 +1,14 @@
+{
+  "search": {
+    "invalid_name": "NoSuchEmployeeName123",
+    "invalid_id": "999999999",
+    "empty_name": "",
+    "empty_id": ""
+  },
+  "add_employee": {
+    "first_name": "Test",
+    "middle_name": "PIM",
+    "last_name": "User",
+    "employee_id": "PIMAUTO123"
+  }
+}

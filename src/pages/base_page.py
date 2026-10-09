@@ -10,5 +10,5 @@ class BasePage:
         raise NotImplementedError("Subclasses must implement goto()")
 
     def wait_for_ready(self) -> None:
-        """Wait until the DOM is fully loaded."""
-        self.page.wait_for_load_state("domcontentloaded")
+        """Wait until the page has fully loaded and the app shell is ready."""
+        self.page.wait_for_load_state("load")
