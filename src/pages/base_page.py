@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 
+# Test file is added to the repo to demonstrate how to use the BasePage class and its subclasses. It is not part of the actual application code.
 
 class BasePage:
     def __init__(self, page: Page) -> None:
