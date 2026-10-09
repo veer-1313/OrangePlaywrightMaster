@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: 'npm'
+          # cache: 'npm'
 
       - name: Install Dependencies
         run: npm install   # use npm ci only if package-lock.json is committed
