@@ -24,21 +24,33 @@ class PIMPage(BasePage):
         expect(self.page_heading).to_be_visible()
 
     def search_employee_by_name(self, employee_name: str) -> None:
+        self.employee_name_input.wait_for(state="visible", timeout=30000)
         self.employee_name_input.fill(employee_name)
+        self.search_button.wait_for(state="visible", timeout=30000)
         self.search_button.click()
+        self.page.wait_for_load_state("networkidle", timeout=30000)
 
     def search_employee_by_id(self, employee_id: str) -> None:
+        self.employee_id_input.wait_for(state="visible", timeout=30000)
         self.employee_id_input.fill(employee_id)
+        self.search_button.wait_for(state="visible", timeout=30000)
         self.search_button.click()
+        self.page.wait_for_load_state("networkidle", timeout=30000)
 
     def reset_search(self) -> None:
+        self.reset_button.wait_for(state="visible", timeout=30000)
         self.reset_button.click()
+        self.page.wait_for_load_state("networkidle", timeout=30000)
 
     def open_add_form(self) -> None:
+        self.add_button.wait_for(state="visible", timeout=30000)
         self.add_button.click()
+        self.save_button.wait_for(state="visible", timeout=30000)
 
     def submit_employee_form(self) -> None:
+        self.save_button.wait_for(state="visible", timeout=30000)
         self.save_button.click()
+        self.page.wait_for_load_state("networkidle", timeout=30000)
 
     def open_employee(self, employee_name: str) -> None:
         self.table.filter(has_text=employee_name).first.click()
