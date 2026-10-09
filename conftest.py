@@ -30,7 +30,7 @@ def pytest_addoption(parser: pytest.Parser) -> None:
     )
 
 
-@pytest.fixture(scope="Session")
+@pytest.fixture(scope="session")
 def page(request: pytest.FixtureRequest) -> Page:
     browser = request.config.getoption("--browser-name")
     headless = request.config.getoption("--headless")

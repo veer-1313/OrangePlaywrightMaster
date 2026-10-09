@@ -29,6 +29,10 @@ jobs:
 
       - name: Run Playwright tests
         run: pytest -v --maxfail=1 --disable-warnings
+      
+      - name: Run Playwright tests
+        run: pytest -v --disable-warnings
+
 
       - name: Upload test reports
         if: always()
